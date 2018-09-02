@@ -14,13 +14,17 @@ that Working Group.
 
 
 ## Dataset contents
-This profile is presented as a Linked Data dataset. It consists of only three
+This profile is presented as a Linked Data dataset. It consists of only four
 data files:
 
 1. **[profiledesc.ttl](profiledesc.ttl)** - a description of the dummy CSIRO ePublish according to the Profile Description Ontology
-2. **[constraints-dcap-syntax.txt](constraints-dcap-syntax.txt)** - dummy constraints of the profile written according to the DCAP Description Set Profile (DSP) syntax
-3. **[constraints.ttl](constraints.ttl)** - the DSP in RDF (turtle), formulated according to <http://dublincore.org/documents/dc-dsp/>
+2. **[profiledesc.png](profiledesc.png)** - a visual representation of 1., also shown below
+3. **[constraints-dcap-syntax.txt](constraints-dcap-syntax.txt)** - dummy constraints of the profile written according to the DCAP Description Set Profile (DSP) syntax
+4. **[constraints.ttl](constraints.ttl)** - the DSP in RDF (turtle), formulated according to <http://dublincore.org/documents/dc-dsp/>
 
+### Visual representation of the profile description
+![](profiledesc.png)
+**Figure 1**: The file 2. above.
 
 ## License
 The content of this API is licensed for use under the [Creative Commons 4.0 License](https://creativecommons.org/licenses/by/4.0/). See the [license deed](LICENSE) all details.
