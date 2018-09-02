@@ -1,0 +1,92 @@
+#
+#   This document is a dummy Description Set Profile, used to define Dublin
+#   Core Application Profiles, for a dummy "CSIRO ePublish Repository"
+#
+#   See http://dublincore.org/documents/profile-guidelines/ for more information
+#
+
+DescriptionSet: CSIRO-ePub-DCAP
+  Description template: Record
+    minimum = 1; maximum = 1
+
+    Statement template: title
+      minimum = 1; maximum = 1
+      Property: http://purl.org/dc/terms/title
+      Type of Value = "literal"
+
+    Statement template: abstract
+      minimum = 1; maximum = 1
+      Property: http://purl.org/dc/terms/abstract
+      Type of Value = "literal"
+
+    Statement template: subject
+      minimum = 0; maximum = unlimited
+      Property: http://purl.org/dc/terms/LCSH
+      Type of Value = "non-literal"
+      takes list = yes
+      Value Encoding Scheme URI = http://lcsh.info/
+
+    Statement template: keyword
+      minimum = 0; maximum = unlimited
+      Property: http://purl.org/dc/terms/subject
+      takes list = yes
+      Type of Value = "literal"
+
+    Statement template: author
+      minimum = 0; maximum = 5
+      Property: http://purl.org/dc/terms/creator
+      Type of Value = "non-literal"
+      defined as = person
+
+    Statement template: created
+      minimum = 1; maximum = 1
+      Property: http://purl.org/dc/terms/created
+      Type of Value = "literal"
+      Syntax Encoding Scheme URI = http://purl.org/dc/terms/W3CDTF
+
+    Statement template: accepted
+      minimum = 0; maximum = 1
+      Property: http://purl.org/dc/terms/dateAccepted
+      Type of Value = "literal"
+      Syntax Encoding Scheme URI = http://purl.org/dc/terms/W3CDTF
+
+    Statement template: publisher
+      minimum = 1; maximum = 1
+      Property: http://purl.org/dc/terms/publisher
+      Type of Value = "non-literal"
+      defined as = publisher
+
+
+  Description template: Person id=person
+    minimum = 0; maximum = unlimited
+
+    Statement template: givenName
+      Property: http://xmlns.com/foaf/0.1/givenname
+      minimum = 1; maximum = 1
+      Type of Value = "literal"
+
+    Statement template: familyName
+      Property: http://xmlns.com/foaf/0.1/family_name
+      minimum = 1; maximum = 1
+      Type of Value = "literal"
+
+    Statement template: email
+      Property: http://xmlns.com/foaf/0.1/mbox
+      minimum = 1; maximum = unlimited
+      Type of Value = "non-literal"
+      value URI = mandatory
+
+
+  Description template: Publisher id=publisher
+    minimum = 0; maximum = unlimited
+
+    Statement template: name
+      Property: http://xmlns.com/foaf/0.1/name
+      minimum = 1; maximum = 1
+      Type of Value = "literal"
+
+    Statement template: email
+      Property: http://xmlns.com/foaf/0.1/mbox
+      minimum = 1; maximum = unlimited
+      Type of Value = "non-literal"
+      value URI = mandatory

@@ -1,0 +1,53 @@
+#
+#   This document is a description, according to the Profile Description
+#   Ontology (see https://w3c.github.io/dxwg/profiledesc/) of a dummy "CSIRO
+#   ePublish Repository" profile of the Dubline Core standard. This profile is
+#   known as a DCAP - Dublin Core Application Profile
+#
+#   See http://dublincore.org/documents/profile-guidelines/ for more information
+#   about Dublin Core Application Profiles
+#
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prof: <https://w3c.github.io/dxwg/profiledes#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+# Base Specification being profiled
+<http://dublincore.org/documents/2012/06/14/dcmi-terms/> a prof:BaseSpecification ;
+    rdfs:label "DCMI Metadata Terms" .
+
+# dummy CSIRO profile of DC for ePublish repository
+# URI not dereferencable
+<http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP>
+    a                 prof:ImplProfile ;
+    rdfs:label        "CSIRO's profile of DC for ePublish" ;
+    prof:profileOf    <http://dublincore.org/documents/2012/06/14/dcmi-terms/> ;
+    prof:token        "ePubDC"^^xsd:Token ;
+    prof:resource     <http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/constraints.ttl> ;
+    prof:resource     <http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/constraints-dcap-syntax.txt> ;
+    prof:resource     <http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/HowTo.pdf> .
+
+# this is an RDF (turtle) version of the DSP constraints for this profile
+<http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/constraints.ttl>
+    a                 prof:ImplResourceDesc ;
+    rdfs:label        "Full constraints in RDF" ;
+    dct:conformsTo    <http://dublincore.org/documents/2008/03/31/dc-dsp/> ; # the constraints conform to the DSP spec
+    dct:format        <https://w3id.org/mediatype/text/turtle> ; # it's in turtle format
+    prof:resourceRole <https://w3c.github.io/dxwg/profiledesc/impl_res_roles.ttl#FullConstraints> . # it's the full constraints: if your instance passes these, you're compliant with the profile
+
+
+<http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/constraints-dcap-syntax.txt>
+    a                 prof:ImplResourceDesc ;
+    rdfs:label        "Full constraints in DSP constraint language" ;
+    dct:conformsTo    <http://dublincore.org/documents/2008/03/31/dc-dsp/> ; # the constraints conform to the DSP spec
+    dct:format        <https://w3id.org/mediatype/text/plain> ; # it's in plan text format
+    prof:resourceRole <https://w3c.github.io/dxwg/profiledesc/impl_res_roles.ttl#FullConstraints> .
+
+# this resource is a PDF file in the dataset about how to use the CSIRO-ePub-DCAP
+<http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/HowTo.pdf>
+    a                 prof:ImplResourceDesc ;
+    rdfs:label        "Guidance document" ;
+    dct:format        <https://w3id.org/mediatype/application/pdf> ;
+    prof:resourceRole <https://w3c.github.io/dxwg/profiledesc/impl_res_roles.ttl#Guidance> . # it guides you in how to implement an instance according to the profile

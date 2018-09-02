@@ -1,0 +1,175 @@
+#
+#   This document is a dummy Description Set Profile, in RDF (turtle), used to
+#   define Dublin Core Application Profiles, for a dummy "CSIRO ePublish
+#   Repository"
+#
+#   See http://dublincore.org/documents/2008/03/31/dc-dsp/ for more information
+#
+
+@prefix dsp: <http://purl.org/dc/dsp/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix :    <http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/> .
+@prefix dcap: <http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/constraints-dcap-syntax.txt#> .
+
+dcap:Record a dsp:DescriptionTemplate ;
+    dsp:maxOccur "0"^^<xsd:nonNegativeInteger> ;
+    dsp:minOccur "0"^^<xsd:nonNegativeInteger> ;
+    dsp:resourceClass <http://purl.org/dc/terms/BibliographicResource> ;
+    dsp:standalone "true"^^<xsd:boolean> ;
+    dsp:statementTemplate
+      [
+        a dsp:LiteralStatementTemplate ;
+          dsp:literalConstraint [
+            a dsp:LiteralConstraint ;
+              dsp:languageOccurrence "mandatory"^^<dsp:occurrence> ;
+              dsp:literal "" ;
+              dsp:syntaxEncodingSchemeOccurrence "disallowed"^^<dsp:occurrence>
+            ] ;
+            dsp:maxOccur "1"^^<xsd:nonNegativeInteger> ;
+            dsp:minOccur "1"^^<xsd:nonNegativeInteger> ;
+            dsp:property <http://purl.org/dc/terms/title> ;
+      ] ,
+      [
+        a dsp:LiteralStatementTemplate ;
+          dsp:literalConstraint [
+            a dsp:LiteralConstraint ;
+                  dsp:language ""^^<xsd:language> ;
+                  dsp:languageOccurrence "mandatory"^^<dsp:occurrence> ;
+                  dsp:literal "" ;
+                  dsp:syntaxEncodingSchemeOccurrence "disallowed"^^<dsp:occurrence>
+            ] ;
+            dsp:maxOccur "1"^^<xsd:nonNegativeInteger> ;
+            dsp:minOccur "1"^^<xsd:nonNegativeInteger> ;
+            dsp:property <http://purl.org/dc/terms/abstract> ;
+      ] ,
+      [
+          a dsp:NonLiteralStatementTemplate ;
+          dsp:nonLiteralConstraint [
+              a dsp:NonLiteralConstraint ;
+              dsp:valueClass skos:Concept ;
+              dsp:vocabularyEncodingScheme <http://lcsh.info> ;
+              dsp:vocabularyEncodingSchemeOccurrence ""^^<dsp:occurrence>
+          ] ;
+          dsp:property <http://purl.org/dc/terms/subject> ; # TODO: resolve the double use of subject
+      ],
+      [
+        a dsp:LiteralStatementTemplate ;
+        dsp:literalConstraint [
+          a dsp:LiteralConstraint ;
+              dsp:languageOccurrence "optional"^^<dsp:occurrence> ;
+              dsp:literal "" ;
+          ] ;
+          dsp:minOccur "0"^^<xsd:nonNegativeInteger> ;
+          dsp:property <http://purl.org/dc/terms/subject> ; # TODO: resolve the double use of subject
+      ] ,
+      [
+          a dsp:NonLiteralStatementTemplate ;
+          dsp:nonLiteralConstraint [
+              a dsp:NonLiteralConstraint ;
+              dsp:descriptionTemplate <dcap-syntax.txt#Person> ;
+              dsp:valueClass <http://xmlns.com/foaf/0.1/Person> ;
+          ] ;
+          dsp:property <http://purl.org/dc/terms/creator> ;
+      ],
+      [
+        a dsp:LiteralStatementTemplate ;
+        dsp:literalConstraint [
+          a dsp:LiteralConstraint ;
+              dsp:literal "" ;
+              dsp:syntaxEncodingScheme xsd:date ;
+          ] ;
+          dsp:maxOccur "1"^^<xsd:nonNegativeInteger> ;
+          dsp:minOccur "1"^^<xsd:nonNegativeInteger> ;
+          dsp:property <http://purl.org/dc/terms/created> ;
+      ] ,
+      [
+          a dsp:LiteralStatementTemplate ;
+          dsp:literalConstraint [
+            a dsp:LiteralConstraint ;
+                dsp:literal "" ;
+                dsp:syntaxEncodingScheme xsd:date ;
+            ] ;
+            dsp:maxOccur "1"^^<xsd:nonNegativeInteger> ;
+            dsp:minOccur "0"^^<xsd:nonNegativeInteger> ;
+            dsp:property <http://purl.org/dc/terms/dateAccepted> ;
+      ] ,
+      [
+          a dsp:NonLiteralStatementTemplate ;
+          dsp:nonLiteralConstraint [
+              a dsp:NonLiteralConstraint ;
+              dsp:descriptionTemplate dcap:Publisher ;
+              dsp:valueClass <http://xmlns.com/foaf/0.1/Agent> ;
+          ] ;
+          dsp:property <http://purl.org/dc/terms/publisher> ;
+      ] .
+
+
+dcap:Person a dsp:DescriptionTemplate ;
+  dsp:minOccur "0"^^<xsd:nonNegativeInteger> ;
+  dsp:resourceClass <http://xmlns.com/foaf/0.1/Person> ;
+  dsp:standalone "true"^^<xsd:boolean> ;
+  dsp:statementTemplate
+  [
+    a dsp:LiteralStatementTemplate ;
+    dsp:literalConstraint [
+      a dsp:LiteralConstraint ;
+            dsp:languageOccurrence "disallowed"^^<dsp:occurrence> ;
+            dsp:literal "" ;
+      ] ;
+      dsp:maxOccur "1"^^<xsd:nonNegativeInteger> ;
+      dsp:minOccur "1"^^<xsd:nonNegativeInteger> ;
+      dsp:property <http://xmlns.com/foaf/0.1/givenname> ;
+  ] ,
+  [
+    a dsp:LiteralStatementTemplate ;
+    dsp:literalConstraint [
+      a dsp:LiteralConstraint ;
+            dsp:languageOccurrence "disallowed"^^<dsp:occurrence> ;
+            dsp:literal "" ;
+      ] ;
+      dsp:maxOccur "1"^^<xsd:nonNegativeInteger> ;
+      dsp:minOccur "1"^^<xsd:nonNegativeInteger> ;
+      dsp:property <http://xmlns.com/foaf/0.1/family_name> ;
+  ] ,
+  [
+      a dsp:NonLiteralStatementTemplate ;
+      dsp:nonLiteralConstraint [
+          a dsp:NonLiteralConstraint ;
+          dsp:valueClass xsd:anyUri ;
+          dsp:vocabularyEncodingSchemeOccurrence ""^^<dsp:occurrence>
+      ] ;
+      dsp:property <http://xmlns.com/foaf/0.1/mbox> ;
+  ] .
+
+dcap:Publisher a dsp:DescriptionTemplate ;
+  dsp:minOccur "0"^^<xsd:nonNegativeInteger> ;
+  dsp:resourceClass <http://xmlns.com/foaf/0.1/Agent> ;
+  dsp:standalone "true"^^<xsd:boolean> ;
+  dsp:statementTemplate
+  [
+    a dsp:LiteralStatementTemplate ;
+      dsp:literalConstraint [
+        a dsp:LiteralConstraint ;
+              dsp:language ""^^<xsd:language> ;
+              dsp:languageOccurrence "disallowed"^^<dsp:occurrence> ;
+              dsp:literal "" ;
+              dsp:syntaxEncodingScheme <> ;
+              dsp:syntaxEncodingSchemeOccurrence ""^^<dsp:occurrence>
+        ] ;
+        dsp:maxOccur "1"^^<xsd:nonNegativeInteger> ;
+        dsp:minOccur "1"^^<xsd:nonNegativeInteger> ;
+        dsp:property <http://xmlns.com/foaf/0.1/name> ;
+  ] ,
+  [
+      a dsp:NonLiteralStatementTemplate ;
+      dsp:nonLiteralConstraint [
+          a dsp:NonLiteralConstraint ;
+          dsp:valueClass xsd:anyUri ;
+          dsp:vocabularyEncodingSchemeOccurrence ""^^<dsp:occurrence>
+      ] ;
+      dsp:property <http://xmlns.com/foaf/0.1/mbox> ;
+  ] .
