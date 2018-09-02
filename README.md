@@ -23,7 +23,7 @@ data files:
 4. **[constraints.ttl](constraints.ttl)** - the DSP in RDF (turtle), formulated according to <http://dublincore.org/documents/dc-dsp/>
 
 ### Visual representation of the profile description
-![](profiledesc.png)
+![](profiledesc.png)  
 **Figure 1**: The file 2. above.
 
 ## License
