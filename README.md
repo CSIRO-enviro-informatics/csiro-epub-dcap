@@ -17,9 +17,9 @@ that Working Group.
 This profile is presented as a Linked Data dataset. It consists of only three
 data files:
 
-1. **profiledesc.ttl** - a description of the dummy CSIRO ePublish according to the Profile Description Ontology
-2. **constraints-dcap-syntax.txt** - dummy constraints of the profile written according to the DCAP Description Set Profile (DSP) syntax
-3. **constraints.ttl** - the DSP in RDF (turtle), formulated according to <http://dublincore.org/documents/dc-dsp/>
+1. **[profiledesc.ttl](profiledesc.ttl)** - a description of the dummy CSIRO ePublish according to the Profile Description Ontology
+2. **[constraints-dcap-syntax.txt](constraints-dcap-syntax.txt)** - dummy constraints of the profile written according to the DCAP Description Set Profile (DSP) syntax
+3. **[constraints.ttl](constraints.ttl)** - the DSP in RDF (turtle), formulated according to <http://dublincore.org/documents/dc-dsp/>
 
 
 ## License
