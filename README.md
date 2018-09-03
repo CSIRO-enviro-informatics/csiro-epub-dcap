@@ -1,6 +1,6 @@
 # CSIRO ePublish Dublin Core Application Profile
 
-This is a dummy profile of the Dublin Core standard constructed as a
+This is a dummy profile of a set of vocabularies ([Dublin Core Terms](http://www.dublincore.org/documents/dcmi-terms/), [FOAF](http://xmlns.com/foaf/spec/) principally but those they utilise and others too) constructed as a
 [Dublin Core Application Profile](http://dublincore.org/documents/profile-guidelines/).
 
 The purpose of creating this dummy profile is to test the power of the
