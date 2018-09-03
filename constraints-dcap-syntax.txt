@@ -36,7 +36,7 @@ DescriptionSet: CSIRO-ePub-DCAP
       minimum = 0; maximum = 5
       Property: http://purl.org/dc/terms/creator
       Type of Value = "non-literal"
-      defined as = person
+      defined as = author
 
     Statement template: created
       minimum = 1; maximum = 1
@@ -57,7 +57,7 @@ DescriptionSet: CSIRO-ePub-DCAP
       defined as = publisher
 
 
-  Description template: Person id=person
+  Description template: Author id=author
     minimum = 0; maximum = unlimited
 
     Statement template: givenName

@@ -17,10 +17,11 @@ that Working Group.
 This profile is presented as a Linked Data dataset. It consists of only four
 data files:
 
-1. **[profiledesc.ttl](profiledesc.ttl)** - a description of the dummy CSIRO ePublish according to the Profile Description Ontology
-2. **[profiledesc.png](profiledesc.png)** - a visual representation of 1., also shown below
-3. **[constraints-dcap-syntax.txt](constraints-dcap-syntax.txt)** - dummy constraints of the profile written according to the DCAP Description Set Profile (DSP) syntax
-4. **[constraints.ttl](constraints.ttl)** - the DSP in RDF (turtle), formulated according to <http://dublincore.org/documents/dc-dsp/>
+1. **[HowTo.pdf](HowTo.pdf)** - a guidance document describing how to create records using this profile and submit them to the CSIRO ePublish Repository
+2. **[profiledesc.ttl](profiledesc.ttl)** - a description of the dummy CSIRO ePublish Repository profile according to the Profile Description Ontology
+3. **[profiledesc.png](profiledesc.png)** - a visual representation of 2., also shown below
+4. **[constraints-dcap-syntax.txt](constraints-dcap-syntax.txt)** - dummy constraints of the profile written according to the DCAP Description Set Profile (DSP) syntax
+5. **[constraints.ttl](constraints.ttl)** - the DSP in RDF (turtle), formulated according to <http://dublincore.org/documents/dc-dsp/>
 
 ### Visual representation of the profile description
 ![](profiledesc.png)  

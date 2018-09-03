@@ -70,7 +70,7 @@ dcap:Record a dsp:DescriptionTemplate ;
           a dsp:NonLiteralStatementTemplate ;
           dsp:nonLiteralConstraint [
               a dsp:NonLiteralConstraint ;
-              dsp:descriptionTemplate <dcap-syntax.txt#Person> ;
+              dsp:descriptionTemplate <dcap-syntax.txt#Author> ;
               dsp:valueClass <http://xmlns.com/foaf/0.1/Person> ;
           ] ;
           dsp:property <http://purl.org/dc/terms/creator> ;
@@ -108,7 +108,7 @@ dcap:Record a dsp:DescriptionTemplate ;
       ] .
 
 
-dcap:Person a dsp:DescriptionTemplate ;
+dcap:Author a dsp:DescriptionTemplate ;
   dsp:minOccur "0"^^<xsd:nonNegativeInteger> ;
   dsp:resourceClass <http://xmlns.com/foaf/0.1/Person> ;
   dsp:standalone "true"^^<xsd:boolean> ;
