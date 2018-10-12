@@ -21,14 +21,14 @@ DescriptionSet: CSIRO-ePub-DCAP
 
     Statement template: subject
       minimum = 0; maximum = unlimited
-      Property: http://purl.org/dc/terms/LCSH
+      Property: http://purl.org/dc/terms/subject
       Type of Value = "non-literal"
       takes list = yes
       Value Encoding Scheme URI = http://lcsh.info/
 
     Statement template: keyword
       minimum = 0; maximum = unlimited
-      Property: http://purl.org/dc/terms/subject
+      Property: http://www.w3.org/ns/dcat#keyword
       takes list = yes
       Type of Value = "literal"
 

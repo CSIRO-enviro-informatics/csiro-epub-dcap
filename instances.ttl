@@ -1,0 +1,125 @@
+@prefix foaf:   <http://xmlns.com/foaf/0.1/givenname> .
+@prefix dsp:    <http://purl.org/dc/dsp/> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml:    <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix :       <http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/instances.ttl#> .
+@prefix dcap:   <http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/constraints-dcap-syntax.txt#> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+
+# Authors
+:car
+    a foaf:Person ;
+    foaf:givenname "Nicholas" ;
+    foaf:family_name "Car" ;
+    foaf:mbox <nicholas.car@csiro.au>
+.
+
+:cox
+    a foaf:Person ;
+    foaf:givenname "Simon" ;
+    foaf:family_name "Cox" ;
+    foaf:mbox <simon.cox@csiro.au>
+.
+
+:golodoniuc
+    a foaf:Person ;
+    foaf:givenname "Pavel" ;
+    foaf:family_name "Golodoniuc" ;
+    foaf:mbox <pavel.golodoniuc@csiro.au>
+.
+
+:klump
+    a foaf:Person ;
+    foaf:givenname "Jens" ;
+    foaf:family_name "Klump" ;
+    foaf:mbox <jens.klump@csiro.au>
+.
+
+# Publishers
+<http://catalogue.linked.data.gov.au/org/O-000886>
+    a foaf:Organization ;
+    foaf:name "Commonwealth Scientific and Industrial Research Organisation" ;
+    foaf:mbox <info@csiro.au>
+.
+
+:compag
+    a foaf:Organization ;
+    foaf:name "Computers and Electronics in Agriculture" ;
+    foaf:mbox <info@elsevier.com>
+.
+
+:dsj
+    a foaf:Organization ;
+    foaf:name "Data Science Journal" ;
+    foaf:mbox <sarah.callaghan@stfc.ac.uk>
+.
+
+:mssanz
+    a foaf:Organization ;
+    foaf:name "Modelling and Simulation Society of Australia and New Zealand Inc. (MSSANZ)" ;
+    foaf:mbox <office@mssanz.org.au>
+.
+
+# Records
+<https://doi.org/10.5334/dsj-2017-034>
+    a dctypes:Text ;
+    dct:title "Distributed Persistent Identifiers System Design" ;
+    dct:abstract """The need to identify both digital and physical objects is ubiquitous in our society. Past and present persistent identifier (PID) systems, of which there is a great variety in terms of technical and social implementation, have evolved with the advent of the Internet, which has allowed for globally unique and globally resolvable identifiers. PID systems have, by in large, catered for identifier uniqueness, integrity, and persistence, regardless of the identifier’s application domain. Trustworthiness of these systems has been measured by the criteria first defined by Bütikofer (2009) and further elaborated by Golodoniuc et al. (2016) and Car et al. (2017).
+
+Since many PID systems have been largely conceived and developed by a single organisation they faced challenges for widespread adoption and, most importantly, the ability to survive change of technology. We believe that a cause of PID systems that were once successful fading away is the centralisation of support infrastructure – both organisational and computing and data storage systems.
+
+In this paper, we propose a PID system design that implements the pillars of a trustworthy system – ensuring identifiers’ independence of any particular technology or organisation, implementation of core PID system functions, separation from data delivery, and enabling the system to adapt for future change. We propose decentralisation at all levels — persistent identifiers and information objects registration, resolution, and data delivery — using Distributed Hash Tables and traditional peer-to-peer networks with information replication and caching mechanisms, thus eliminating the need for a central PID data store. This will increase overall system fault tolerance thus ensuring its trustworthiness. We also discuss important aspects of the distributed system’s governance, such as the notion of the authoritative source and data integrity.""" ;
+    dct:subject <http://id.loc.gov/authorities/subjects/sh2001003097> , <http://id.loc.gov/authorities/subjects/sh99010374> ;
+    dcat:keyword "Identifier systems" ,
+                "persistent identifiers" ,
+                "distributed systems" ,
+                "Distributed Hash Tables" ,
+                "peer-to-peer networks" ,
+                "PID" ,
+                "P2P" ;
+    dct:creator :golodoniuc ,:car , :klump ;
+    dct:created "2017-03-15"^^xsd:date ;
+    dct:dateAccepted "2017-06-28"^^xsd:date ;
+    dct:publisher :mssanz
+.
+
+<https://doi.org/10.1016/j.compag.2018.07.024>
+    a dctypes:Text ;
+    dct:title "Using decision models to enable better irrigation Decision Support Systems" ;
+    dct:abstract """Many attempts have been made to enhance irrigation decisions using Decision Support Systems (DSS). These have met with limited success for many reasons, one of which is well known: that DSS encode decision rules (waterbalances, financial models) narrower in scope than the criteria farmers really use to make decisions, thus their advice is of limited value or perhaps entirely irrelevant.
+
+To assist irrigation DSS designers build more flexible systems, we suggest they heed decision theory and decision modelling, separately from domain-specific DSS tasks. They may then find better ways of modelling real-world decisions which might allow for wider ranging sets of decision rules than previously.
+
+To facilitate this, we review three different decision modelling systems and with each model the seemingly straightforward irrigation decision “How much should I water today?”. In doing this we show how they can assist with wide-ranging rule integration. The systems we chose are: Decision Modelling Notation (DMN) from the business analysis community; the Decision Ontology (DO), a Semantic Web modelling system; and Decision Modelling Ontology (DMO) a formal ontology from Information Systems Engineering.
+
+We have determined that each of these modelling systems have useful aspects for irrigation DSS designers, which we list, but that they are not equally useful. Also, none of the systems provide designers with both the best modelling system and best technology & tools. We complete our work with a list of requirements for a future decision modelling system based on the intersection of the strengths of the systems investigated and our perceptions of irrigation DSS need. We believe a future system is possible to make and could serve irrigation DSS designers better than any current system.
+
+In future work, we indicate what steps might be taken with existing systems to evolve them in line with our future system requirements. Finally, we conclude with a summary of our findings.""" ;
+    dct:subject <http://id.loc.gov/authorities/subjects/sh85036200> , <http://id.loc.gov/authorities/subjects/sh85068283> , <http://id.loc.gov/authorities/subjects/sh2018001881> ;
+    dcat:keyword "Decision modelling",
+                "Irrigation",
+                "Decision Support System",
+                "Decision Modelling Notation",
+                "Ontology" ;
+    dct:creator :car ;
+    dct:created "2017"^^xsd:gYear ;
+    dct:dateAccepted "2018-07-19"^^xsd:date ;
+    dct:publisher :compag
+.
+
+<http://www.mssanz.org.au/modsim2015/C4/cox.pdf>
+    a dctypes:Text ;
+    dct:title "PROV and Real Things" ;
+    dct:abstract """The PROV data model is becoming accepted as a flexible and robust tool for formalizing information relating to the production of documents and datasets. Provenance stores based on the PROV-O implementation are appearing in support of scientific data workflows. However, the scope of PROV does not have to be limited to digital or information assets. For example, specimens typically undergo complex preparation sequences prior to actual observations and measurements, and it is important to record this to ensure reproducibility and to enable assessment of the reliability of data produced. PROV provides a flexible solution, allowing a comprehensive trace of predecessor entities and transformations at any level of detail. In this paper we demonstrate the use of PROV for describing specimens managed for scientific observations. Two examples are considered: a geological sample which undergoes a typical preparation process for measurements of the concentration of a particular chemical substance, and the collection, taxonomic classification and eventual publication of an insect specimen. We briefly compare PROV with related work.""" ;
+    dct:subject <http://id.loc.gov/authorities/subjects/sh00007927> , <http://id.loc.gov/authorities/subjects/sh85054031> , <http://id.loc.gov/authorities/subjects/sh99001749> ;
+    dcat:keyword "Provenance" , "PROV" , "sampling" , "specimen" ;
+    dct:creator :cox , :car ;
+    dct:created "2015"^^xsd:gYear ;
+    dct:dateAccepted "2015-07-15"^^xsd:date ;
+    dct:publisher :mmsanz
+.
