@@ -28,7 +28,7 @@ This profile is presented as a Linked Data definitional resource. It consists of
 
 
 ## Instances
-Several instances of dummy resources implementing this profile are given in RDF (turtle) in the <instances.ttl> file and repeated in Microsoft Excel <instances.xlsx> allowing for comparison. 
+Several instances of dummy resources implementing this profile are given in RDF (turtle) in the [instances.ttl](instances.ttl) file and repeated in Microsoft Excel [instances.xlsx](instances.xlsx) allowing for comparison. 
 
 ## License
 The content of this API is licensed for use under the [Creative Commons 4.0 License](https://creativecommons.org/licenses/by/4.0/). See the [license deed](LICENSE) all details.
