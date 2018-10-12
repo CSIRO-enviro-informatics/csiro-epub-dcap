@@ -7,67 +7,115 @@
 @prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
 @prefix :       <http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/instances.ttl#> .
 @prefix dcap:   <http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/constraints-dcap-syntax.txt#> .
-@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix dct:    <http://purl.org/dc/terms/> .
 @prefix dcat:   <http://www.w3.org/ns/dcat#> .
+
+
+# this collection of CSIRO ePub Records, as a whole, constitutes a dataset
+<http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/instances>
+    a dcat:Dataset ;
+    dct:title "CSIRO ePub Records" ;
+    dct:abstract """This (dummy) dataset contains (dummy) records of papers stored by authors in CSIRO's ePub publishing platform.
+
+In addition to containing distinct items for each record (each published item) as instances of the dcmitype:Text class, this dataset contains distinct items for each Author and Publisher which are foaf:Person and foaf:Organization class instances respectively.""" ;
+    dcat:distribution
+        <http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/instances.ttl> ,
+        <http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/instances.xlsx> ;
+    dct:creator :car ;
+    dct:issued "2018-10-12"^^xsd:date ;
+    dct:modified "2018-10-12"^^xsd:date ;
+    dct:language <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    dct:publisher <http://catalogue.linked.data.gov.au/org/O-000886> ;
+    dct:type dcmitype:Collection ;
+    dct:conformsTo <http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP> ;
+.
+
+<http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/instances.ttl>
+    a dcat:Distribution ;
+    dct:title "CSIRO ePub Records, in RDF (turtle)" ;
+    dct:modified "2018-10-12"^^xsd:date ;
+    dct:license <http://linked.data.gov.au/license/CC-BY-4.0> ;  # does not resolve, yet
+    dcat:downloadURL : ;
+    dcat:byteSize "10000"^^xsd:decimal ;
+    dcat:mediaType <http://w3id.org/mediatype/text/turtle> ;
+.
+
+<http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/instances.xlsx>
+    a dcat:Distribution ;
+    dct:title "CSIRO ePub Records, in Microsoft Excel format" ;
+    dct:modified "2018-10-12"^^xsd:date ;
+    dct:license <http://linked.data.gov.au/license/CC-BY-4.0> ;  # does not resolve, yet
+    dcat:downloadURL <http://linked.data.gov.au/dataset/CSIRO-ePub-DCAP/instances.xlsx> ;
+    dcat:byteSize "17000"^^xsd:decimal ;
+    dcat:mediaType <http://w3id.org/mediatype/application/vnd.ms-excel> ;
+.
 
 # Authors
 :car
     a foaf:Person ;
     foaf:givenname "Nicholas" ;
     foaf:family_name "Car" ;
-    foaf:mbox <nicholas.car@csiro.au>
+    foaf:mbox <nicholas.car@csiro.au> ;
+    dct:isPartOf :
 .
 
 :cox
     a foaf:Person ;
     foaf:givenname "Simon" ;
     foaf:family_name "Cox" ;
-    foaf:mbox <simon.cox@csiro.au>
+    foaf:mbox <simon.cox@csiro.au> ;
+    dct:isPartOf :
 .
 
 :golodoniuc
     a foaf:Person ;
     foaf:givenname "Pavel" ;
     foaf:family_name "Golodoniuc" ;
-    foaf:mbox <pavel.golodoniuc@csiro.au>
+    foaf:mbox <pavel.golodoniuc@csiro.au> ;
+    dct:isPartOf :
 .
 
 :klump
     a foaf:Person ;
     foaf:givenname "Jens" ;
     foaf:family_name "Klump" ;
-    foaf:mbox <jens.klump@csiro.au>
+    foaf:mbox <jens.klump@csiro.au> ;
+    dct:isPartOf :
 .
 
 # Publishers
 <http://catalogue.linked.data.gov.au/org/O-000886>
     a foaf:Organization ;
     foaf:name "Commonwealth Scientific and Industrial Research Organisation" ;
-    foaf:mbox <info@csiro.au>
+    foaf:mbox <info@csiro.au> ;
+    dct:isPartOf :
 .
 
 :compag
     a foaf:Organization ;
     foaf:name "Computers and Electronics in Agriculture" ;
-    foaf:mbox <info@elsevier.com>
+    foaf:mbox <info@elsevier.com> ;
+    dct:isPartOf :
 .
 
 :dsj
     a foaf:Organization ;
     foaf:name "Data Science Journal" ;
-    foaf:mbox <sarah.callaghan@stfc.ac.uk>
+    foaf:mbox <sarah.callaghan@stfc.ac.uk> ;
+    dct:isPartOf :
 .
 
 :mssanz
     a foaf:Organization ;
     foaf:name "Modelling and Simulation Society of Australia and New Zealand Inc. (MSSANZ)" ;
-    foaf:mbox <office@mssanz.org.au>
+    foaf:mbox <office@mssanz.org.au> ;
+    dct:isPartOf :
 .
 
 # Records
 <https://doi.org/10.5334/dsj-2017-034>
-    a dctypes:Text ;
+    a dcmitype:Text ;
     dct:title "Distributed Persistent Identifiers System Design" ;
     dct:abstract """The need to identify both digital and physical objects is ubiquitous in our society. Past and present persistent identifier (PID) systems, of which there is a great variety in terms of technical and social implementation, have evolved with the advent of the Internet, which has allowed for globally unique and globally resolvable identifiers. PID systems have, by in large, catered for identifier uniqueness, integrity, and persistence, regardless of the identifier’s application domain. Trustworthiness of these systems has been measured by the criteria first defined by Bütikofer (2009) and further elaborated by Golodoniuc et al. (2016) and Car et al. (2017).
 
@@ -85,11 +133,12 @@ In this paper, we propose a PID system design that implements the pillars of a t
     dct:creator :golodoniuc ,:car , :klump ;
     dct:created "2017-03-15"^^xsd:date ;
     dct:dateAccepted "2017-06-28"^^xsd:date ;
-    dct:publisher :mssanz
+    dct:publisher :mssanz ;
+    dct:isPartOf :
 .
 
 <https://doi.org/10.1016/j.compag.2018.07.024>
-    a dctypes:Text ;
+    a dcmitype:Text ;
     dct:title "Using decision models to enable better irrigation Decision Support Systems" ;
     dct:abstract """Many attempts have been made to enhance irrigation decisions using Decision Support Systems (DSS). These have met with limited success for many reasons, one of which is well known: that DSS encode decision rules (waterbalances, financial models) narrower in scope than the criteria farmers really use to make decisions, thus their advice is of limited value or perhaps entirely irrelevant.
 
@@ -109,11 +158,12 @@ In future work, we indicate what steps might be taken with existing systems to e
     dct:creator :car ;
     dct:created "2017"^^xsd:gYear ;
     dct:dateAccepted "2018-07-19"^^xsd:date ;
-    dct:publisher :compag
+    dct:publisher :compag ;
+    dct:isPartOf :
 .
 
 <http://www.mssanz.org.au/modsim2015/C4/cox.pdf>
-    a dctypes:Text ;
+    a dcmitype:Text ;
     dct:title "PROV and Real Things" ;
     dct:abstract """The PROV data model is becoming accepted as a flexible and robust tool for formalizing information relating to the production of documents and datasets. Provenance stores based on the PROV-O implementation are appearing in support of scientific data workflows. However, the scope of PROV does not have to be limited to digital or information assets. For example, specimens typically undergo complex preparation sequences prior to actual observations and measurements, and it is important to record this to ensure reproducibility and to enable assessment of the reliability of data produced. PROV provides a flexible solution, allowing a comprehensive trace of predecessor entities and transformations at any level of detail. In this paper we demonstrate the use of PROV for describing specimens managed for scientific observations. Two examples are considered: a geological sample which undergoes a typical preparation process for measurements of the concentration of a particular chemical substance, and the collection, taxonomic classification and eventual publication of an insect specimen. We briefly compare PROV with related work.""" ;
     dct:subject <http://id.loc.gov/authorities/subjects/sh00007927> , <http://id.loc.gov/authorities/subjects/sh85054031> , <http://id.loc.gov/authorities/subjects/sh99001749> ;
@@ -121,5 +171,6 @@ In future work, we indicate what steps might be taken with existing systems to e
     dct:creator :cox , :car ;
     dct:created "2015"^^xsd:gYear ;
     dct:dateAccepted "2015-07-15"^^xsd:date ;
-    dct:publisher :mmsanz
+    dct:publisher :mmsanz ;
+    dct:isPartOf :
 .
