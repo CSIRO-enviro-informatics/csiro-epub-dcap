@@ -1,5 +1,5 @@
 #
-#   This document is a description, according to the Profiles Ontology (see https://w3c.github.io/dxwg/profiledesc/)
+#   This document is a description, according to the Profiles Ontology (see https://w3c.github.io/dxwg/profilesont/)
 #   of a dummy "CSIRO ePublish Repository" profile of the Dubline Core standard. This profile is known as a DCAP -
 #   Dublin Core Application Profile
 #
@@ -33,19 +33,18 @@
     rdfs:label        "Full constraints in RDF" ;
     dct:conformsTo    <http://dublincore.org/documents/2008/03/31/dc-dsp/> ; # the constraints conform to the DSP spec
     dct:format        <https://w3id.org/mediatype/text/turtle> ; # it's in turtle format
-    prof:hasRole      <https://w3c.github.io/dxwg/profiledesc/impl_res_roles.ttl#FullConstraints> . # it's the full constraints: if your instance passes these, you're compliant with the profile
-
+    prof:hasRole      <https://w3c.github.io/dxwg/profilesont/resource_roles.ttl#FullConstraints> . # it's the full constraints: if your instance passes these, you're compliant with the profile
 
 <http://test.linked.data.gov.au/test/def/CSIRO-ePub-DCAP/constraints-dcap-syntax.txt>
     a                 prof:ResourceDescriptor ;
     rdfs:label        "Full constraints in DSP constraint language" ;
     dct:conformsTo    <http://dublincore.org/documents/2008/03/31/dc-dsp/> ; # the constraints conform to the DSP spec
     dct:format        <https://w3id.org/mediatype/text/plain> ; # it's in plan text format
-    prof:hasRole      <https://w3c.github.io/dxwg/profiledesc/impl_res_roles.ttl#FullConstraints> .
+    prof:hasRole      <https://w3c.github.io/dxwg/profilesont/resource_roles.ttl#FullConstraints> .
 
 # this resource is a PDF file in the def about how to use the CSIRO-ePub-DCAP
 <http://test.linked.data.gov.au/test/def/CSIRO-ePub-DCAP/HowTo.pdf>
     a                 prof:ResourceDescriptor ;
     rdfs:label        "Guidance document" ;
     dct:format        <https://w3id.org/mediatype/application/pdf> ;
-    prof:hasRole      <https://w3c.github.io/dxwg/profiledesc/impl_res_roles.ttl#Guidance> . # it guides you in how to implement an instance according to the profile
+    prof:hasRole      <https://w3c.github.io/dxwg/profilesont/resource_roles.ttl#Guidance> . # it guides you in how to implement an instance according to the profile
