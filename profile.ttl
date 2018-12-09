@@ -17,15 +17,25 @@
     rdfs:label "DCMI Metadata Terms" .
 
 # dummy CSIRO profile of DC for ePublish repository
-# URI not dereferencable
+# URIs not dereferencable
 <http://test.linked.data.gov.au/test/def/CSIRO-ePub-DCAP>
     a                 prof:Profile ;
     rdfs:label        "CSIRO's profile of DC for ePublish" ;
     prof:profileOf    <http://dublincore.org/documents/2012/06/14/dcmi-terms/> ;
     prof:token        "ePubDC"^^xsd:Token ;
+    prof:hasResource     <http://linked.data.gov.au/def/CSIRO-ePub-DCAP> ;
     prof:hasResource     <http://linked.data.gov.au/def/CSIRO-ePub-DCAP/constraints.ttl> ;
     prof:hasResource     <http://linked.data.gov.au/def/CSIRO-ePub-DCAP/constraints-dcap-syntax.txt> ;
     prof:hasResource     <http://linked.data.gov.au/def/CSIRO-ePub-DCAP/HowTo.pdf> .
+
+# example's code repository home
+<http://linked.data.gov.au/def/CSIRO-ePub-DCAP/>
+    a                 prof:ResourceDescriptor ;
+    rdfs:label        "Profile Summary" ;
+    dct:format        <https://w3id.org/mediatype/text/html> ;
+    # it may be better to use another role for this doc other than 'Guidance' since Guidance seems to be more
+    # about 'how to' rather than this overview
+    prof:hasRole      <https://raw.githubusercontent.com/w3c/dxwg/gh-pages/profilesont/resource_roles.ttl#Guidance> .
 
 # this is an RDF (turtle) version of the DSP constraints for this profile
 <http://test.linked.data.gov.au/test/def/CSIRO-ePub-DCAP/constraints.ttl>
