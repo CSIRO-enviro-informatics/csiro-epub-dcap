@@ -8,7 +8,7 @@
 
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix prof: <http://www.w3.org/ns/prof#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 
@@ -23,9 +23,9 @@
     rdfs:label        "CSIRO's profile of DC for ePublish" ;
     prof:profileOf    <http://dublincore.org/documents/2012/06/14/dcmi-terms/> ;
     prof:token        "ePubDC"^^xsd:Token ;
-    prof:resource     <http://linked.data.gov.au/def/CSIRO-ePub-DCAP/constraints.ttl> ;
-    prof:resource     <http://linked.data.gov.au/def/CSIRO-ePub-DCAP/constraints-dcap-syntax.txt> ;
-    prof:resource     <http://linked.data.gov.au/def/CSIRO-ePub-DCAP/HowTo.pdf> .
+    prof:hasResource     <http://linked.data.gov.au/def/CSIRO-ePub-DCAP/constraints.ttl> ;
+    prof:hasResource     <http://linked.data.gov.au/def/CSIRO-ePub-DCAP/constraints-dcap-syntax.txt> ;
+    prof:hasResource     <http://linked.data.gov.au/def/CSIRO-ePub-DCAP/HowTo.pdf> .
 
 # this is an RDF (turtle) version of the DSP constraints for this profile
 <http://test.linked.data.gov.au/test/def/CSIRO-ePub-DCAP/constraints.ttl>
