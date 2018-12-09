@@ -1,3 +1,6 @@
+# example instances conforming to CSIRO-ePub-DCAP
+# NOTE: URIs for these resources are dummies and do not resolve
+
 @prefix foaf:   <http://xmlns.com/foaf/0.1/givenname> .
 @prefix dsp:    <http://purl.org/dc/dsp/> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
