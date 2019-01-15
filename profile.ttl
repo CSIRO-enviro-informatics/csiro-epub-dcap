@@ -29,7 +29,7 @@
 # example's code repository home
 _:1
     a                 prof:ResourceDescriptor ;
-    rdfs:label        "Profile Summary" ;
+    rdfs:label        "Profile Specifcation" ;
     dct:format        <https://w3id.org/mediatype/text/html> ;
     # the official written text specifying the Profile
     prof:hasRole      role:Specification ;
@@ -57,7 +57,7 @@ _:3
 # this resource is a PDF file in the def about how to use the CSIRO-ePub-DCAP
 _:4
     a                 prof:ResourceDescriptor ;
-    rdfs:label        "Specification document" ;
+    rdfs:label        "Guidance document" ;
     dct:format        <https://w3id.org/mediatype/application/pdf> ;
     # general guidance info on how to use/implement this Profile
     prof:hasRole      role:Guidance ;
