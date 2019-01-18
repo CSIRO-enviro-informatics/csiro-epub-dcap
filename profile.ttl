@@ -22,7 +22,7 @@
 <http://test.linked.data.gov.au/test/def/CSIRO-ePub-DCAP>
     a                 prof:Profile ;
     rdfs:label        "CSIRO's profile of DC for ePublish" ;
-    prof:profileOf    <http://dublincore.org/documents/2012/06/14/dcmi-terms/> ;
+    prof:isProfileOf    <http://dublincore.org/documents/2012/06/14/dcmi-terms/> ;
     prof:token        "ePubDC"^^xsd:Token ;
     prof:hasResource  _:1 , _:2 , _:3 , _:4 .
 
@@ -33,7 +33,7 @@ _:1
     dct:format        <https://w3id.org/mediatype/text/html> ;
     # the official written text specifying the Profile
     prof:hasRole      role:Specification ;
-    prof:hasAtrifact  <http://linked.data.gov.au/def/CSIRO-ePub-DCAP/> .
+    prof:hasArtifact  <http://linked.data.gov.au/def/CSIRO-ePub-DCAP/> .
 
 # this is an RDF (turtle) version of the DSP constraints for this profile
 _:2
@@ -43,7 +43,7 @@ _:2
     dct:format        <https://w3id.org/mediatype/text/turtle> ; # it's in Turtle format
     # this is full constraints: if your instance passes these, you're compliant with the profile    
     prof:hasRole      role:FullConstraints ; 
-    prof:hasAtrifact  <http://test.linked.data.gov.au/test/def/CSIRO-ePub-DCAP/constraints.ttl> .
+    prof:hasArtifact  <http://test.linked.data.gov.au/test/def/CSIRO-ePub-DCAP/constraints.ttl> .
 
 _:3
     a                 prof:ResourceDescriptor ;
@@ -52,7 +52,7 @@ _:3
     dct:format        <https://w3id.org/mediatype/text/plain> ; # it's in plan text format
     # this is full constraints: if your instance passes these, you're compliant with the profile   
     prof:hasRole      role:FullConstraints ;
-    prof:hasAtrifact  <http://test.linked.data.gov.au/test/def/CSIRO-ePub-DCAP/constraints-dcap-syntax.txt> .
+    prof:hasArtifact  <http://test.linked.data.gov.au/test/def/CSIRO-ePub-DCAP/constraints-dcap-syntax.txt> .
 
 # this resource is a PDF file in the def about how to use the CSIRO-ePub-DCAP
 _:4
@@ -61,5 +61,5 @@ _:4
     dct:format        <https://w3id.org/mediatype/application/pdf> ;
     # general guidance info on how to use/implement this Profile
     prof:hasRole      role:Guidance ;
-    prof:hasAtrifact  <http://test.linked.data.gov.au/test/def/CSIRO-ePub-DCAP/HowTo.pdf> .    
+    prof:hasArtifact  <http://test.linked.data.gov.au/test/def/CSIRO-ePub-DCAP/HowTo.pdf> .    
 
