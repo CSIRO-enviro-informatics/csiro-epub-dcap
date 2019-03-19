@@ -41,8 +41,8 @@ _:2
     rdfs:label        "Full constraints in RDF" ;
     dct:conformsTo    <http://dublincore.org/documents/2008/03/31/dc-dsp/> ; # the constraints conform to the DSP spec
     dct:format        <https://w3id.org/mediatype/text/turtle> ; # it's in Turtle format
-    # this is full constraints: if your instance passes these, you're compliant with the profile    
-    prof:hasRole      role:FullConstraints ; 
+    # this is full constraints: if your instance passes these, you're compliant with the profile
+    prof:hasRole      role:Constraints ;
     prof:hasArtifact  <http://test.linked.data.gov.au/test/def/CSIRO-ePub-DCAP/constraints.ttl> .
 
 _:3
@@ -50,8 +50,8 @@ _:3
     rdfs:label        "Full constraints in DSP constraint language" ;
     dct:conformsTo    <http://dublincore.org/documents/2008/03/31/dc-dsp/> ; # the constraints conform to the DSP spec
     dct:format        <https://w3id.org/mediatype/text/plain> ; # it's in plan text format
-    # this is full constraints: if your instance passes these, you're compliant with the profile   
-    prof:hasRole      role:FullConstraints ;
+    # this is full constraints: if your instance passes these, you're compliant with the profile
+    prof:hasRole      role:Constraints ;
     prof:hasArtifact  <http://test.linked.data.gov.au/test/def/CSIRO-ePub-DCAP/constraints-dcap-syntax.txt> .
 
 # this resource is a PDF file in the def about how to use the CSIRO-ePub-DCAP
@@ -61,5 +61,4 @@ _:4
     dct:format        <https://w3id.org/mediatype/application/pdf> ;
     # general guidance info on how to use/implement this Profile
     prof:hasRole      role:Guidance ;
-    prof:hasArtifact  <http://test.linked.data.gov.au/test/def/CSIRO-ePub-DCAP/HowTo.pdf> .    
-
+    prof:hasArtifact  <http://test.linked.data.gov.au/test/def/CSIRO-ePub-DCAP/HowTo.pdf> .
