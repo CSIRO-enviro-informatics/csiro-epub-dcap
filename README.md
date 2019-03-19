@@ -23,7 +23,7 @@ This profile is presented as a Linked Data definitional resource. It consists of
 6. **[constraints.ttl](constraints.ttl)** - the DSP in RDF (turtle), formulated according to <http://dublincore.org/documents/dc-dsp/>
 
 ### Visual representation
-![](profile.png)  
+![](csiro-dummy-dcap.svg)  
 **Figure 1**: The file 4. above.
 
 
