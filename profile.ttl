@@ -1,5 +1,5 @@
 #
-#   This document is a description, according to the Profiles Ontology (see https://w3c.github.io/dxwg/profilesont/)
+#   This document is a description, according to the Profiles Vocabulary (see https://www.w3.org/TR/dx-prof/)
 #   of a dummy "CSIRO ePublish Repository" profile of the Dubline Core standard. This profile is known as a DCAP -
 #   Dublin Core Application Profile
 #
