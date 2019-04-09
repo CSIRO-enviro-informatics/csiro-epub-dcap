@@ -5,7 +5,7 @@ This is a dummy *profile* of a set of vocabularies, principally ([Dublin Core Te
 This profile is constructed as a [Dublin Core Application Profile](http://dublincore.org/documents/profile-guidelines/)
 which constrains the vocabulary terms used.
 
-The various parts of this profile - the constraints, this descriptive document etc, - are described using the
+The various parts of this profile - the constraints, this descriptive document etc. - are described using the
 [Profiles Ontology](https://w3c.github.io/dxwg/profilesont/).
 
 This dummy has been created during the operations of the [W3C](https://www.w3.org/)'s
