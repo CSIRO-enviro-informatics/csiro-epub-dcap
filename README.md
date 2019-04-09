@@ -17,7 +17,7 @@ This profile is presented as a Linked Data definitional resource. It consists of
 
 1. **this file** - the profile overview
 2. **[HowTo.pdf](HowTo.pdf)** - a guidance document describing how to create records using this profile and submit them to the CSIRO ePublish Repository
-3. **[profile.ttl](profile.ttl)** - a description of the dummy CSIRO ePublish Repository profile according to the Profile Description Ontology
+3. **[profile.ttl](profile.ttl)** - a description of the dummy CSIRO ePublish Repository profile according to the Profile Description vocabulary  in RDF (turtle)
 4. **[csiro-dummy-dcap.svg](csiro-dummy-dcap.svg)** - a visual representation of 3., also shown below, which is of the profile elements according to the [Profiles Ontology](https://w3c.github.io/dxwg/profilesont/)
 5. **[constraints-dcap-syntax.txt](constraints-dcap-syntax.txt)** - dummy constraints of the profile written according to the DCAP Description Set Profile (DSP) syntax
 6. **[constraints.ttl](constraints.ttl)** - the DSP in RDF (turtle), formulated according to <http://dublincore.org/documents/dc-dsp/>

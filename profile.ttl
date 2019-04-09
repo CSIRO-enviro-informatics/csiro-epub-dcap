@@ -49,7 +49,7 @@ _:3
     a                 prof:ResourceDescriptor ;
     rdfs:label        "Full constraints in DSP constraint language" ;
     dct:conformsTo    <http://dublincore.org/documents/2008/03/31/dc-dsp/> ; # the constraints conform to the DSP spec
-    dct:format        <https://w3id.org/mediatype/text/plain> ; # it's in plan text format
+    dct:format        <https://w3id.org/mediatype/text/plain> ; # it's in plain text format
     # this is full constraints: if your instance passes these, you're compliant with the profile
     prof:hasRole      role:Constraints ;
     prof:hasArtifact  <http://test.linked.data.gov.au/test/def/CSIRO-ePub-DCAP/constraints-dcap-syntax.txt> .
